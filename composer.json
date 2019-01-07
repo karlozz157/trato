@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Prexto\\": "src/"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.0",
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
