@@ -59,7 +59,7 @@ class ContractManager
      */
     protected function request($method, $uri, array $data = [])
     {
-        $uri = sprintf('/api/v2/contract%s', $uri);
+        $uri = sprintf('/api/contract%s', $uri);
 
         try {
             return $this->client->request($method, $uri, [
@@ -90,10 +90,10 @@ class ContractManager
         }
 
         $uri = sprintf('/configuration/%s', $this->contractId);
-
+        /*
         return $this->request('POST', $uri, [
             'json' => $data
-        ]);
+        ]);*/
     }
 
     /**
@@ -108,11 +108,11 @@ class ContractManager
 
     /**
      * @param string $participantId
-     * @param array  $variables
+     * @param array  $data
      *
      * @return array
      */
-    public function setVariables($participantId, array $variables)
+    public function setVariables($participantId, array $data)
     {
         if (!$data) {
             return;
